@@ -1,0 +1,48 @@
+{
+    "openapi": "3.0.1",
+    "info": {
+        "title": "Weather API",
+        "description": "",
+        "version": "v1"
+    },
+    "servers": [
+        {
+            "url": "https://apimanagement1001.azure-api.net/weather/v1"
+        }
+    ],
+    "paths": {
+        "/WeatherForecast": {
+            "get": {
+                "summary": "WeatherForecast",
+                "operationId": "weatherforecast",
+                "responses": {
+                    "200": {
+                        "description": null
+                    }
+                }
+            }
+        }
+    },
+    "components": {
+        "securitySchemes": {
+            "apiKeyHeader": {
+                "type": "apiKey",
+                "name": "Ocp-Apim-Subscription-Key",
+                "in": "header"
+            },
+            "apiKeyQuery": {
+                "type": "apiKey",
+                "name": "subscription-key",
+                "in": "query"
+            }
+        }
+    },
+    "security": [
+        {
+            "apiKeyHeader": []
+        },
+        {
+            "apiKeyQuery": []
+        }
+    ]
+}
